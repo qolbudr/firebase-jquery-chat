@@ -3,62 +3,7 @@
     <link rel="stylesheet" type="text/css" href="qchat.min.css">
   </head>
   <body>
-    <div id="qchat">
-      <div class="chat-bubble">
-        <div class="logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/134/134914.png">
-        </div>
-      </div>
-      <div class="chat-box">
-        <div class="chat-header">
-          <div class="chat-back">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          </div>
-          <div class="chat-title">
-            QChat
-          </div>
-        </div>
-        <div class="chat-list-person" style="display: none">
-          <div class="content">
-            <div class="list-data">
-              <div class="dp-picture">
-                <img src="https://www.sunsetlearning.com/wp-content/uploads/2019/09/User-Icon-Grey-300x300.png">
-              </div>
-              <div class="dp-message">
-                <h4>Qolbu</h4>
-                <div class="dp-status">
-                  <div class="status-icon">
-                    <div class="sent">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#bdbdbd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    </div>
-                    <div class="read">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2c9cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <svg style="margin-left: -13px;" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2c9cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    </div>
-                  </div>
-                  <!-- <div class="srar" -->
-                  <h5>Message</h5>
-                </div>
-              </div>
-            </div>
-            <div class="msg-status">
-              <h6>13:00</h6>
-              <div class="unread">1</div>
-            </div>
-          </div>
-        </div>
-        <div class="chat-content">
-          <div class="chat-content-list">
-          </div>
-          <div class="chat-control">
-            <input type="text" id="chat-input" placeholder="Ketik pesan">
-            <button id="btn-send">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="qchat"></div>
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="firebase-app.js"></script>
     <script type="text/javascript" src="firebase-firestore.js"></script>
@@ -76,6 +21,8 @@
 
       var app = firebase.initializeApp(firebaseConfig);
       var db = firebase.firestore();
+
+      $("#qchat").qchatInit();
 
       QChat.sendChat({
         myId: 1, 

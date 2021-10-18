@@ -8,7 +8,7 @@
   font-family: 'Rubik', sans-serif;
 }
 
-#qchat .chat-bubble {
+#qchat .chat-bubble,#qchat .chat-close {
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -26,12 +26,23 @@
   width: 100%;
 } 
 
+#qchat .chat-close .logo,#qchat .chat-close .logo img,#qchat .chat-close .logo svg {
+  width: 100%;
+}
+
+#qchat .chat-close {
+  display: none;
+} 
+
 #qchat .chat-box {
   width: 320px;
   height: 450px;
   position: absolute;
-  right: 0px;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
   bottom: 80px;
+  right: 0px;
   background-color: white;
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
