@@ -104,7 +104,10 @@
 #qchat .dp-status h5 {
   margin: 0;
   font-weight: 400;
-  margin-left: 5px;
+}
+
+#qchat .dp-status .status-icon {
+  margin-right: 5px;
 }
 
 #qchat .read {
