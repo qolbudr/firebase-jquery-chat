@@ -172,3 +172,37 @@
 #qchat button:disabled {
   background-color: gray;
 }
+
+#qchat .chat-send {
+  color: white;
+  margin-bottom: 10px;
+}
+
+#qchat .chat-send .text {
+  background-color: #2c9cff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  max-width: 80%;
+  word-break: break-word;
+  overflow: hidden;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0px;
+  right: 0;
+  display: table;
+}
+
+#qchat .chat-reply {
+  color: black;
+  margin-bottom: 10px;
+}
+
+#qchat .chat-reply .text {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  max-width: 80%;
+  word-break: break-word;
+  overflow: hidden;
+  display: inline-block;
+}
