@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+#qchat {
+  position: absolute;
+  z-index: 20;
+  bottom: 30px;
+  right: 30px;
+  font-family: 'Rubik', sans-serif;
+}
+
+#qchat .chat-bubble {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#qchat .chat-bubble .logo,#qchat .chat-bubble .logo img,#qchat .chat-bubble .logo i {
+  width: 100%;
+} 
+
+#qchat .chat-box {
+  width: 320px;
+  height: 450px;
+  position: absolute;
+  right: 0px;
+  bottom: 80px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+
+#qchat .chat-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+#qchat .chat-back {
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+#qchat .chat-list-person .content {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+#qchat .chat-list-person .content:hover {
+  background-color: #f5f5f5;
+}
+
+#qchat .list-data {
+  display: flex;
+  align-items: center;
+}
+
+#qchat .list-data img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+#qchat .dp-message {
+  margin-left: 10px;
+}
+
+#qchat .dp-message h4 {
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+#qchat .dp-status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#qchat .dp-status h5 {
+  margin: 0;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+#qchat .read {
+  display: none;
+}
+
+#qchat .msg-status {
+  text-align: right;
+}
+
+#qchat .msg-status h6 {
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#qchat .msg-status .unread {
+  background-color: #2c9cff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
+#qchat .chat-content-list {
+  padding: 15px;
+  height: 300px;
+  background-color: #fbfbfb;
+}
+
+#qchat .chat-control {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#qchat input {
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: 1px solid #f5f5f5;
+  width: 100%;
+  outline: none;
+  margin-right: 10px;
+}
+
+#qchat button {
+  background-color: #2c9cff;
+  color: white;
+  outline: none;
+  border: unset;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#qchat button:hover {
+  filter: brightness(0.8);
+}
+
+#qchat button:disabled {
+  background-color: gray;
+}
