@@ -22,15 +22,17 @@
       var app = firebase.initializeApp(firebaseConfig);
       var db = firebase.firestore();
 
-      $("#qchat").qchatInit();
-
-      QChat.startChat({
-        myId: 2, 
-        toId: 1, 
-        myName: "Qolbu", 
-        toName: "Admin",
-        message: "sdjkds"
+      $("#qchat").qchatInit({
+        myId: 2
       });
+
+      // QChat.startChat({
+      //   myId: 3, 
+      //   toId: 2, 
+      //   myName: "Owner", 
+      //   toName: "Qolbu",
+      //   message: "sdjkds"
+      // });
     </script>
   </body>
 </html>
