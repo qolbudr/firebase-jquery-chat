@@ -76,6 +76,7 @@
 #qchat .list-data {
   display: flex;
   align-items: center;
+  width: calc(100% - 50px);
 }
 
 #qchat .list-data img {
@@ -87,6 +88,8 @@
 
 #qchat .dp-message {
   margin-left: 10px;
+  width: 100%;
+  overflow: hidden;
 }
 
 #qchat .dp-message h4 {
@@ -104,6 +107,10 @@
 #qchat .dp-status h5 {
   margin: 0;
   font-weight: 400;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #qchat .dp-status .status-icon {
@@ -185,7 +192,7 @@
   padding: 10px;
   padding-right: 50px;
   border-radius: 15px;
-  max-width: 80%;
+  max-width: 70%;
   word-break: break-word;
   overflow: hidden;
   text-align: left;
@@ -207,7 +214,7 @@
   padding: 10px;
   padding-right: 50px;
   border-radius: 15px;
-  max-width: 80%;
+  max-width: 70%;
   word-break: break-word;
   overflow: hidden;
   display: inline-block;
@@ -227,4 +234,8 @@
   position: absolute;
   right: 10px;
   bottom: 7px;
+}
+
+#qchat .truncate {
+  width: 100%;
 }
