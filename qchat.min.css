@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 
-#qchat {
-  position: absolute;
+#qchat-element {
+  position: fixed;
   z-index: 20;
   bottom: 30px;
   right: 30px;
   font-family: 'Rubik', sans-serif;
 }
 
-#qchat .chat-bubble,#qchat .chat-close {
+#qchat-element .chat-bubble,#qchat-element .chat-close {
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -22,46 +22,46 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-#qchat .chat-bubble .logo,#qchat .chat-bubble .logo img,#qchat .chat-bubble .logo i {
+#qchat-element .chat-bubble .logo,#qchat-element .chat-bubble .logo img,#qchat-element .chat-bubble .logo i {
   width: 100%;
 } 
 
-#qchat .chat-close .logo,#qchat .chat-close .logo img,#qchat .chat-close .logo svg {
+#qchat-element .chat-close .logo,#qchat-element .chat-close .logo img,#qchat-element .chat-close .logo svg {
   width: 100%;
 }
 
-#qchat .chat-close {
+#qchat-element .chat-close {
   display: none;
 } 
 
-#qchat .chat-box {
+#qchat-element .chat-box {
   width: 320px;
   height: 450px;
-  position: absolute;
+  position: fixed;
   transition: 0.3s ease-in-out;
   opacity: 0;
   visibility: hidden;
-  bottom: 80px;
-  right: 0px;
+  bottom: 115px;
+  right: 30px;
   background-color: white;
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
 }
 
-#qchat .chat-header {
+#qchat-element .chat-header {
   padding: 15px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #f5f5f5;
 }
 
-#qchat .chat-back {
+#qchat-element .chat-back {
   margin-right: 10px;
   cursor: pointer;
   display: none;
 }
 
-#qchat .chat-list-person .content {
+#qchat-element .chat-list-person .content {
   display: flex;
   padding: 15px;
   justify-content: space-between;
@@ -69,42 +69,42 @@
   cursor: pointer;
 }
 
-#qchat .chat-list-person .content:hover {
+#qchat-element .chat-list-person .content:hover {
   background-color: #f5f5f5;
 }
 
-#qchat .list-data {
+#qchat-element .list-data {
   display: flex;
   align-items: center;
   width: calc(100% - 50px);
 }
 
-#qchat .list-data img {
+#qchat-element .list-data img {
   width: 45px;
   height: 45px;
   object-fit: cover;
   opacity: 0.5;
 }
 
-#qchat .dp-message {
+#qchat-element .dp-message {
   margin-left: 10px;
   width: 100%;
   overflow: hidden;
 }
 
-#qchat .dp-message h4 {
+#qchat-element .dp-message h4 {
   margin: 0;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
-#qchat .dp-status {
+#qchat-element .dp-status {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
 }
 
-#qchat .dp-status h5 {
+#qchat-element .dp-status h5 {
   margin: 0;
   font-weight: 400;
   width: 100%;
@@ -113,26 +113,26 @@
   text-overflow: ellipsis;
 }
 
-#qchat .dp-status .status-icon {
+#qchat-element .dp-status .status-icon {
   margin-right: 5px;
   margin-bottom: -5px;
 }
 
-#qchat .read {
+#qchat-element .read {
   display: none;
 }
 
-#qchat .msg-status {
+#qchat-element .msg-status {
   text-align: right;
 }
 
-#qchat .msg-status h6 {
+#qchat-element .msg-status h6 {
   font-weight: 500;
   margin: 0;
   margin-bottom: 10px;
 }
 
-#qchat .msg-status .unread {
+#qchat-element .msg-status .unread {
   background-color: #2c9cff;
   color: white;
   padding: 5px 10px;
@@ -141,13 +141,13 @@
   font-size: 10px;
 }
 
-#qchat .chat-content-list {
+#qchat-element .chat-content-list {
   padding: 15px;
   height: 300px;
   background-color: #fbfbfb;
 }
 
-#qchat .chat-control {
+#qchat-element .chat-control {
   display: flex;
   padding: 15px;
   justify-content: space-between;
@@ -155,7 +155,7 @@
   border-top: 1px solid #f5f5f5;
 }
 
-#qchat input {
+#qchat-element input {
   border-radius: 10px;
   padding: 10px 15px;
   border: 1px solid #f5f5f5;
@@ -164,7 +164,7 @@
   margin-right: 10px;
 }
 
-#qchat button {
+#qchat-element button {
   background-color: #2c9cff;
   color: white;
   outline: none;
@@ -174,20 +174,20 @@
   cursor: pointer;
 }
 
-#qchat button:hover {
+#qchat-element button:hover {
   filter: brightness(0.8);
 }
 
-#qchat button:disabled {
-  background-color: gray;
+#qchat-element button:disabled {
+  filter: grayscale(100%);
 }
 
-#qchat .chat-send {
+#qchat-element .chat-send {
   color: white;
   margin-bottom: 10px;
 }
 
-#qchat .chat-send .text {
+#qchat-element .chat-send .text {
   background-color: #2c9cff;
   padding: 10px;
   padding-right: 50px;
@@ -204,12 +204,12 @@
   position: relative;
 }
 
-#qchat .chat-reply {
+#qchat-element .chat-reply {
   color: black;
   margin-bottom: 10px;
 }
 
-#qchat .chat-reply .text {
+#qchat-element .chat-reply .text {
   background-color: white;
   padding: 10px;
   padding-right: 50px;
@@ -222,20 +222,29 @@
   position: relative;
 }
 
-#qchat .chat-send .text-time {
+#qchat-element .chat-send .text-time {
   font-size: 8px;
   position: absolute;
   right: 10px;
   bottom: 7px;
 }
 
-#qchat .chat-reply .text-time {
+#qchat-element .chat-reply .text-time {
   font-size: 8px;
   position: absolute;
   right: 10px;
   bottom: 7px;
 }
 
-#qchat .truncate {
+#qchat-element .truncate {
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  #qchat-element .chat-box {
+    bottom: 115px;
+    right: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 125px);
+  }
 }
