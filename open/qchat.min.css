@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 
+#qchat div, #qchat input {
+  line-height: initial;
+  font-size: revert;
+  font-family: 'Rubik', sans-serif;
+  font-weight: initial;
+  box-sizing: initial;
+}
+
+#qchat h4,#qchat h5,#qchat h6 {
+  font-size: initial;
+  font-weight: initial;
+}
+
+#qchat h5 {
+  font-size: 0.83em;
+}
+
+#qchat h6 {
+  font-size: 0.67em
+}
+
+#qchat-button {
+  font-size: revert;
+}
+
 #qchat-element {
   position: fixed;
   z-index: 20;
@@ -20,6 +45,7 @@
   justify-content: center;
   padding: 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-sizing: unset;
 }
 
 #qchat-element .chat-bubble .logo,#qchat-element .chat-bubble .logo img,#qchat-element .chat-bubble .logo i {
@@ -242,9 +268,10 @@
 
 @media only screen and (max-width: 768px) {
   #qchat-element .chat-box {
-    bottom: 115px;
-    right: 10px;
-    width: calc(100% - 20px);
-    height: calc(100% - 125px);
+    bottom: 0;
+    right: 0;
+    width: calc(100%);
+    height: calc(100%);
+    border-radius: 0;
   }
 }
