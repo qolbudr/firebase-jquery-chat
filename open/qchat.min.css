@@ -93,6 +93,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  width: initial;
 }
 
 #qchat-element .chat-list-person .content:hover {
